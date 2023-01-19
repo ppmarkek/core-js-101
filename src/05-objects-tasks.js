@@ -25,9 +25,7 @@ function Rectangle(width, height) {
   this.height = height;
 }
 
-Rectangle.prototype.getArea = function () {
-  return this.width * this.height;
-};
+Rectangle.prototype.getArea = () => this.width * this.height;
 
 /**
  * Returns the JSON representation of specified object
@@ -62,7 +60,7 @@ function fromJSON(proto, json) {
   return new proto.constructor(...values);
 }
 
-Rectangle.prototype.Circle = function (w, h) {
+Rectangle.prototype.Circle = (w, h) => {
   this.width = w;
   this.height = h;
 };
